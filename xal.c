@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-const char* MOD_KEY = "Alt_R";
+const char* MOD_KEY = "Alt_L";
 const char* DISPLAY_NAME = ":0";
 const Bool END_NEWLINE = True;
 
