@@ -40,6 +40,7 @@ format:
 	clang-format -i $(SRC) $(DEF)
 
 ubuntu:
+	sudo apt-get update
 	sudo apt-get install libxi-dev
 	sudo apt-get install libx11-dev
 

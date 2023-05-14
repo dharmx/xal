@@ -1,0 +1,63 @@
+WHAT IS XAL?
+============
+
+xal is a small glyph generating utility that allows you
+press (KeyPress) and hold a modifier key like Alt_R and
+then listen to all the alphanumerical keys are being pressed.
+And after you let go (KeyRelease) of the modififier key
+that is: Alt_R all the alphanumerical keys that were
+pressed when Alt_R was pressed to when Alt_R was released,
+will be prefixed with an \u.
+
+USING XCLIP
+===========
+
+Here are some ideas for things you can do with xal:
+
+    Listen for only one session and exit:
+    $ xal # some keys will be pressed
+    \u2550
+
+    Continuously listen for Modifiers:
+    $ while :; do xal; done
+    \u2550
+    \u2551
+    \u3422
+
+    $ Render the symbols:
+    $ while :; do echo $(xal); done # render the above codes
+    ═
+    ║
+    㐢
+
+    Copy using xclip and press ctrl+v/ctrl+shift+v with xdotool:
+    $ echo $(xal) | xclip -selection c && xdotool key ctrl+shift+v
+    
+    Delete trailing newline:
+    $ echo $(xal) | tr -d '\n' | xclip -selection c && xdotool key ctrl+shift+v
+
+
+HOW CAN I HELP?
+===============
+xal is somewhat complete. But if you face any issues and have a fix, do
+send a pull request. Additionally:
+* I need help writing a man page.
+* If you found any non-alphanumeric keys that weren't blacklisted then let me know.
+* If you want to make this have arguments then let me know.
+* Any more feature ideas?
+
+LICENSE
+=======
+
+GNU GPL-3.0.
+
+CONTACT
+=======
+
+Web:
+https://github.com/dharmx/xal
+
+Email:
+dharmx.dev@gmail.com
+
+Please email me about problems, experiences, patches, fixes, etc.
