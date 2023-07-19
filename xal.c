@@ -1,12 +1,19 @@
-#include "xal.h"
-
 #include <X11/XKBlib.h>
+#include <X11/Xlib.h>
 #include <X11/extensions/XInput2.h>
 
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
+
+const u_int UTF_STR_LEN = 10;
+
+const u_int EXIT_DPY_NOT_OPEN = 1;
+const u_int EXIT_EXT_NOT_FOUND = 2;
+const u_int EXIT_XI_QRY_RET_BAD = 3;
+const u_int EXIT_XI_QRY_RET_FAIL = 4;
 
 const char* MOD_KEY = "Alt_L";
 const char* DISPLAY_NAME = ":0";

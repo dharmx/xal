@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Make xcal
+    name: Make xal
     permissions:
       contents: write
       packages: write
